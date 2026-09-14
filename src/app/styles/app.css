@@ -1,0 +1,137 @@
+/* App shell — header, footer, layout chrome */
+
+.container {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--sp-5);
+}
+
+@media (min-width: 720px) {
+  .container {
+    padding-inline: var(--sp-8);
+  }
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  outline: none;
+}
+
+/* Header ---------------------------------------------------------------- */
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--header-border);
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  min-height: 60px;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.app-nav__link {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.app-nav__link:hover {
+  color: var(--text-primary);
+  background: var(--surface-hover);
+}
+
+/* Demo banner ----------------------------------------------------------- */
+
+.demo-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--pv-paper-200);
+  border-bottom: 1px solid var(--line-soft);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.demo-banner code {
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  background: var(--surface-raised);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-xs);
+  padding: 1px 4px;
+}
+
+/* Footer ---------------------------------------------------------------- */
+
+.app-footer {
+  border-top: 1px solid var(--line-soft);
+  padding-block: var(--sp-8) var(--sp-10);
+  margin-top: var(--sp-12);
+}
+
+.app-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.app-footer__lede {
+  max-width: 52ch;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-normal);
+}
+
+.app-footer__meta {
+  color: var(--text-faint);
+}
+
+.app-footer__dot {
+  margin-inline: var(--sp-2);
+  color: var(--line-strong);
+}
+
+/* Motion grain for page transitions ------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-main > * {
+    animation: vellum-page 320ms var(--ease-out) both;
+  }
+}
+
+@keyframes vellum-page {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

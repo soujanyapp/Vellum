@@ -1,0 +1,213 @@
+/* ============================================================================
+   VELLUM — Design tokens
+   Three-layer architecture: primitive → semantic → component
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   Primitive layer — raw values. Never reference these directly in components.
+   --------------------------------------------------------------------------- */
+:root {
+  /* Vellum paper neutrals */
+  --pv-paper-0: #fffdf9;
+  --pv-paper-50: #fbf9f4;
+  --pv-paper-100: #f6f4ef; /* page ground */
+  --pv-paper-200: #eeeae2; /* sunken panels */
+  --pv-paper-300: #e3ddd1; /* hover beds */
+
+  /* Line (hairline stroke) scale */
+  --pv-line-100: #ece7de;
+  --pv-line-200: #ddd7cb;
+  --pv-line-300: #c9c2b2;
+
+  /* Ink (text) scale — cool slate, never pure black */
+  --pv-ink-300: #9aa2ab;
+  --pv-ink-400: #808a95;
+  --pv-ink-500: #5f6a76;
+  --pv-ink-600: #46525e;
+  --pv-ink-700: #333e49;
+  --pv-ink-800: #232d36;
+  --pv-ink-900: #16202a; /* primary text */
+
+  /* Prussian signal (interaction, links, focus) */
+  --pv-prussian-50: #eaf2f8;
+  --pv-prussian-100: #d3e4f0;
+  --pv-prussian-400: #2f6ea0;
+  --pv-prussian-500: #1d5a8f;
+  --pv-prussian-600: #15497a;
+  --pv-prussian-700: #113d64;
+  --pv-prussian-800: #0e3150;
+
+  /* Open-access green (status only) */
+  --pv-oa-50: #eaf4ef;
+  --pv-oa-100: #d7e9df;
+  --pv-oa-600: #2e7d5d;
+  --pv-oa-700: #24684c;
+  --pv-oa-800: #1d543d;
+
+  /* Danger / retraction */
+  --pv-danger-50: #fbeceb;
+  --pv-danger-100: #f6d8d5;
+  --pv-danger-600: #b3352c;
+  --pv-danger-700: #94271f;
+
+  /* White for inverted text */
+  --pv-white: #ffffff;
+}
+
+/* ---------------------------------------------------------------------------
+   Semantic layer — purpose. Referenced by components.
+   --------------------------------------------------------------------------- */
+:root {
+  --surface-page: var(--pv-paper-100);
+  --surface-card: var(--pv-paper-50);
+  --surface-raised: var(--pv-white);
+  --surface-sunken: var(--pv-paper-200);
+  --surface-hover: var(--pv-paper-50);
+
+  --text-primary: var(--pv-ink-900);
+  --text-secondary: var(--pv-ink-600);
+  --text-muted: var(--pv-ink-400);
+  --text-faint: var(--pv-ink-300);
+  --text-inverted: var(--pv-white);
+  --text-link: var(--pv-prussian-700);
+  --text-link-hover: var(--pv-prussian-800);
+
+  --line: var(--pv-line-200);
+  --line-soft: var(--pv-line-100);
+  --line-strong: var(--pv-line-300);
+
+  --accent: var(--pv-prussian-600);
+  --accent-strong: var(--pv-prussian-800);
+  --accent-soft: var(--pv-prussian-50);
+  --accent-soft-border: var(--pv-prussian-100);
+
+  --oa: var(--pv-oa-700);
+  --oa-soft: var(--pv-oa-50);
+  --oa-soft-border: var(--pv-oa-100);
+  --oa-strong: var(--pv-oa-800);
+
+  --danger: var(--pv-danger-600);
+  --danger-strong: var(--pv-danger-700);
+  --danger-soft: var(--pv-danger-50);
+  --danger-soft-border: var(--pv-danger-100);
+
+  --focus-ring: var(--pv-prussian-500);
+}
+
+/* ---------------------------------------------------------------------------
+   Typography
+   --------------------------------------------------------------------------- */
+:root {
+  --font-serif: 'Newsreader Variable', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Instrument Sans Variable', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+
+  --text-2xs: 0.6875rem; /* 11px */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.8125rem; /* 13px */
+  --text-md: 0.9375rem; /* 15px — UI body */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.3125rem; /* 21px */
+  --text-2xl: 1.75rem; /* 28px */
+  --text-3xl: 2.25rem; /* 36px */
+  --text-4xl: 3rem; /* 48px */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.08em;
+
+  /* Reading measure */
+  --measure-read: 65ch;
+  --measure-prose: 60ch;
+}
+
+/* ---------------------------------------------------------------------------
+   Spacing, geometry, elevation
+   --------------------------------------------------------------------------- */
+:root {
+  --sp-0: 0;
+  --sp-1: 0.25rem; /* 4 */
+  --sp-2: 0.5rem; /* 8 */
+  --sp-3: 0.75rem; /* 12 */
+  --sp-4: 1rem; /* 16 */
+  --sp-5: 1.25rem; /* 20 */
+  --sp-6: 1.5rem; /* 24 */
+  --sp-8: 2rem; /* 32 */
+  --sp-10: 2.5rem; /* 40 */
+  --sp-12: 3rem; /* 48 */
+  --sp-16: 4rem; /* 64 */
+  --sp-20: 5rem; /* 80 */
+  --sp-24: 6rem; /* 96 */
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --shadow-raised: 0 0 0 1px var(--pv-line-200), 0 10px 30px -12px rgba(22, 32, 42, 0.18);
+  --shadow-pop: 0 0 0 1px var(--pv-line-200), 0 18px 44px -16px rgba(22, 32, 42, 0.28);
+  --shadow-focus: 0 0 0 3px var(--pv-prussian-500);
+
+  --container-wide: 1180px;
+  --container-nav: 1180px;
+  --container-read: 760px;
+}
+
+/* ---------------------------------------------------------------------------
+   Motion
+   --------------------------------------------------------------------------- */
+:root {
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.25, 1);
+  --dur-fast: 140ms;
+  --dur-med: 240ms;
+  --dur-slow: 460ms;
+}
+
+/* ---------------------------------------------------------------------------
+   Component layer — concrete compositions of the semantic tokens above.
+   --------------------------------------------------------------------------- */
+:root {
+  /* Buttons */
+  --btn-primary-bg: var(--accent);
+  --btn-primary-fg: var(--text-inverted);
+  --btn-primary-bg-hover: var(--accent-strong);
+
+  --btn-hairline-bg: transparent;
+  --btn-hairline-fg: var(--text-primary);
+  --btn-hairline-bg-hover: var(--pv-paper-300);
+  --btn-hairline-border: var(--line-strong);
+
+  /* Inputs */
+  --input-bg: var(--surface-card);
+  --input-bg-hover: var(--surface-raised);
+  --input-border: var(--line);
+  --input-border-focus: var(--pv-prussian-500);
+  --input-fg: var(--text-primary);
+  --input-placeholder: var(--text-muted);
+
+  /* Result index list */
+  --index-row-border: var(--line-soft);
+  --index-row-hover-bg: var(--surface-card);
+
+  /* Badge / chip */
+  --chip-bg: var(--surface-sunken);
+  --chip-bg-hover: var(--surface-hover);
+  --chip-border: var(--line-soft);
+  --chip-fg: var(--text-secondary);
+
+  /* Card */
+  --card-bg: var(--surface-card);
+  --card-border: var(--line-soft);
+
+  /* Header */
+  --header-bg: rgba(246, 244, 239, 0.9);
+  --header-border: var(--line-soft);
+}

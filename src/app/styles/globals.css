@@ -1,0 +1,152 @@
+/* ============================================================================
+   VELLUM — Global base styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background-color: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga', 'kern';
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--text-link-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background: var(--pv-prussian-100);
+  color: var(--pv-ink-900);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 550;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Utility: resilient serif reading text */
+.v-prose {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  letter-spacing: -0.005em;
+  max-width: var(--measure-prose);
+}
+
+/* Utility: mono data voice for scholarly identifiers */
+.v-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Skip link */
+.v-skip {
+  position: absolute;
+  inset-block-start: -100%;
+  inset-inline-start: var(--sp-4);
+  z-index: 100;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--accent);
+  color: var(--text-inverted);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: inset-block-start var(--dur-fast) var(--ease-out);
+}
+
+.v-skip:focus {
+  inset-block-start: var(--sp-3);
+}
+
+/* Horizontal hairline rule */
+.v-hr {
+  border: none;
+  border-top: 1px solid var(--line-soft);
+}
+
+/* Sticky header chrome is blended with the page; keep it accessible */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Respect users who reduce transparency */
+@media (prefers-reduced-transparency: reduce) {
+  .v-masthead {
+    background: var(--surface-page) !important;
+  }
+}

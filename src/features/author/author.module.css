@@ -1,0 +1,234 @@
+.layout {
+  max-width: 760px;
+  padding-block: var(--sp-8) var(--sp-12);
+}
+
+.breadcrumb {
+  margin-bottom: var(--sp-6);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin: 0 0 var(--sp-2);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--sp-5);
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+.stats {
+  list-style: none;
+  display: flex;
+  gap: var(--sp-10);
+  margin: 0 0 var(--sp-4);
+  padding: var(--sp-4) 0;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+}
+
+.bio {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0 0 var(--sp-4);
+}
+
+.orcid {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: var(--sp-3);
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.topic {
+  font-size: var(--text-xs);
+  border: 1px solid var(--line-soft);
+  background: var(--surface-raised);
+  border-radius: var(--radius-full);
+  padding: 3px 12px;
+  color: var(--text-muted);
+}
+
+.sectionHeading {
+  font-family: var(--font-serif);
+  font-weight: 550;
+  font-size: var(--text-xl);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  margin: var(--sp-10) 0 var(--sp-3);
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+}
+
+.worksTotal {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+}
+
+.worksHint {
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+  margin: 0;
+}
+
+.workList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+}
+
+.workTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.workItem:hover .workTitle {
+  color: var(--accent);
+}
+
+.workMeta {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+
+.pageButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.pageButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageButton:not(:disabled):hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pageStatus {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Skeletons -------------------------------------------------------------- */
+
+.skeletonName {
+  height: 44px;
+  width: 50%;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--surface-raised) 25%, var(--surface-hover) 50%, var(--surface-raised) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+.skeletonStat {
+  height: 22px;
+  width: 35%;
+  margin-top: var(--sp-4);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--surface-raised) 25%, var(--surface-hover) 50%, var(--surface-raised) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+.skeletonWork {
+  height: 64px;
+  margin-top: var(--sp-3);
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, var(--surface-raised) 25%, var(--surface-hover) 50%, var(--surface-raised) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonName,
+  .skeletonStat,
+  .skeletonWork {
+    animation: none;
+  }
+}

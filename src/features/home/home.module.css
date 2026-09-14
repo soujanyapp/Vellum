@@ -1,0 +1,258 @@
+.hero {
+  padding-block: clamp(var(--sp-12), 12vh, var(--sp-20)) var(--sp-10);
+  max-width: 880px;
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin: 0 0 var(--sp-3);
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  text-wrap: balance;
+  margin: 0;
+}
+
+.heroSub {
+  margin-top: var(--sp-4);
+  max-width: 54ch;
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  text-wrap: pretty;
+}
+
+.searchZone {
+  margin-top: var(--sp-8);
+}
+
+.underSearch {
+  margin-top: var(--sp-5);
+}
+
+.underSearchLabel {
+  display: block;
+  margin-bottom: var(--sp-2);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.sourceLine {
+  margin-top: var(--sp-6);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+}
+
+/* Problem cards ----------------------------------------------------------- */
+
+.problems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--sp-6);
+  padding-block: var(--sp-12);
+}
+
+.problemCard {
+  padding: var(--sp-6);
+  border-top: 1px solid var(--line-soft);
+}
+
+.problemNum {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+}
+
+.problemCard h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  letter-spacing: var(--tracking-tight);
+  margin: var(--sp-3) 0 var(--sp-2);
+  color: var(--text-primary);
+}
+
+.problemCard p {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+/* Why Vellum (Differentiation) -------------------------------------------- */
+
+.whyVellum {
+  padding-block: var(--sp-12);
+  border-top: 1px solid var(--line-soft);
+}
+
+.whyVellumHeading {
+  max-width: 62ch;
+  margin-bottom: var(--sp-8);
+}
+
+.whyVellumHeading h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-3xl);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.whyVellumIntro {
+  margin-top: var(--sp-3);
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  text-wrap: pretty;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--sp-6);
+}
+
+.pillar {
+  padding: var(--sp-6);
+  border-top: 1px solid var(--line-strong);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.pillarNum {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+}
+
+.pillar h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.pillar p {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-muted);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.coda {
+  margin-top: var(--sp-10);
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Sources ----------------------------------------------------------------- */
+
+.sources {
+  padding-block: var(--sp-12);
+  border-top: 1px solid var(--line-soft);
+}
+
+.sourcesHeading {
+  max-width: 56ch;
+  margin-bottom: var(--sp-8);
+}
+
+.sourcesHeading h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-3xl);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.sourcesSub {
+  margin-top: var(--sp-3);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+}
+
+.sourceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--sp-4);
+}
+
+.sourceCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-5);
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+a.sourceCard:hover {
+  border-color: var(--line-strong);
+}
+
+.sourceName {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+}
+
+.sourceMeta {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.sourceBlurb {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-normal);
+  text-wrap: pretty;
+}
+
+/* Not found --------------------------------------------------------------- */
+
+.notFound {
+  padding-block: clamp(var(--sp-16), 18vh, var(--sp-32));
+  max-width: 640px;
+}
+
+.homeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-6);
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

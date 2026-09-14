@@ -1,0 +1,22 @@
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.wordmarkMark {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.wordmarkName {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 550;
+  letter-spacing: var(--tracking-tight);
+}

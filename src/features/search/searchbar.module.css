@@ -1,0 +1,189 @@
+.hero,
+.compact {
+  position: relative;
+}
+
+.inputShell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-lg);
+  background: var(--surface-raised);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-inset);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.inputShell:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 var(--focus-ring) var(--focus-ring-color);
+}
+
+.hero .inputShell {
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-xl);
+}
+
+.compact .inputShell {
+  padding: 0 var(--sp-3);
+}
+
+.inputVisual {
+  display: flex;
+  color: var(--text-faint);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  caret-color: var(--accent);
+}
+
+.hero .input {
+  font-size: var(--fs-search);
+  padding: var(--sp-3);
+}
+
+.compact .input {
+  font-size: var(--text-base);
+  padding: var(--sp-2);
+}
+
+.input::placeholder {
+  color: var(--text-faint);
+}
+
+.input::-webkit-search-cancel-button,
+.input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-1);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-faint);
+  cursor: pointer;
+}
+
+.clear:hover {
+  background: var(--surface-hover);
+  color: var(--text-secondary);
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  margin-right: var(--sp-2);
+  border-radius: 50%;
+  border: 2px solid var(--line-strong);
+  border-top-color: var(--accent);
+  animation: v-spin 700ms linear infinite;
+}
+
+@keyframes v-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--surface-raised);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-popover);
+  overflow: hidden;
+}
+
+.popoverHint {
+  padding: var(--sp-3) var(--sp-4) var(--sp-2);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 var(--sp-2);
+}
+
+.suggestion {
+  display: block;
+  padding: var(--sp-2) var(--sp-4);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.suggestionActive {
+  background: var(--surface-hover);
+}
+
+.suggestionTitle {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  text-wrap: pretty;
+}
+
+.suggestionMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-1);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.suggestionDots {
+  color: var(--line-strong);
+}
+
+/* Linked examples -------------------------------------------------------- */
+
+.examples {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-2);
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+
+.example:hover {
+  border-color: var(--line-strong);
+  color: var(--text-primary);
+  background: var(--surface-hover);
+}

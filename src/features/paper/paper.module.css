@@ -1,0 +1,299 @@
+.layout {
+  max-width: 760px;
+  padding-block: var(--sp-8) var(--sp-12);
+}
+
+.breadcrumb {
+  margin-bottom: var(--sp-6);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.retracted {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  margin-bottom: var(--sp-6);
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--danger) 30%, transparent);
+  border-radius: var(--radius-md);
+  color: var(--danger);
+  font-size: var(--text-sm);
+}
+
+.head {
+  margin-bottom: var(--sp-8);
+}
+
+.headBadges {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-3);
+}
+
+.badgeType,
+.badgeOa,
+.badgeMuted {
+  font-size: var(--text-xs);
+  border-radius: var(--radius-full);
+  padding: 2px 10px;
+  border: 1px solid var(--line-strong);
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.badgeOa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  color: var(--green);
+  border-color: color-mix(in srgb, var(--green) 35%, transparent);
+}
+
+.badgeMuted {
+  text-transform: none;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+  color: var(--text-primary);
+  margin: 0 0 var(--sp-4);
+}
+
+.authors {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0 0 var(--sp-6);
+  text-wrap: balance;
+}
+
+.authorLink {
+  color: var(--accent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-underline-offset: 3px;
+}
+
+.authorLink:hover {
+  text-decoration-color: var(--accent);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--sp-4) var(--sp-6);
+  margin: 0 0 var(--sp-2);
+  padding: var(--sp-4) 0;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.fact dt {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: 2px;
+}
+
+.fact dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.sectionHeading {
+  font-family: var(--font-serif);
+  font-weight: 550;
+  font-size: var(--text-xl);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  margin: var(--sp-8) 0 var(--sp-3);
+}
+
+.abstract {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: var(--leading-loose);
+  color: var(--text-secondary);
+  margin: 0;
+  text-wrap: pretty;
+  text-align: justify;
+  hyphens: auto;
+}
+
+@media (max-width: 640px) {
+  .abstract {
+    text-align: left;
+  }
+}
+
+.topics {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.topic {
+  font-size: var(--text-xs);
+  border: 1px solid var(--line-soft);
+  background: var(--surface-raised);
+  border-radius: var(--radius-full);
+  padding: 3px 12px;
+  color: var(--text-muted);
+}
+
+.links {
+  padding-top: var(--sp-2);
+}
+
+.linkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-md);
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-size: var(--text-sm);
+}
+
+.cta:hover {
+  filter: brightness(1.08);
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--accent);
+  font-size: var(--text-sm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.paywallNote {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  margin-top: var(--sp-3);
+  width: fit-content;
+}
+
+.related {
+  margin-top: var(--sp-4);
+  border-top: 1px solid var(--line-soft);
+  padding-top: var(--sp-2);
+}
+
+.relatedHint {
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+}
+
+.relatedList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.relatedItem {
+  display: block;
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+}
+
+.relatedTitle {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.relatedItem:hover .relatedTitle {
+  color: var(--accent);
+}
+
+.relatedMeta {
+  display: block;
+  margin-top: var(--sp-1);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Skeletons ------------------------------------------------------------ */
+
+.skeletonTitle {
+  height: 56px;
+  width: 80%;
+  background: var(--surface-hover);
+  border-radius: var(--radius-sm);
+  animation: shimmer 1.4s linear infinite;
+  background: linear-gradient(90deg, var(--surface-raised) 25%, var(--surface-hover) 50%, var(--surface-raised) 75%);
+  background-size: 200% 100%;
+}
+
+.skeletonAuthors {
+  height: 18px;
+  width: 45%;
+  background: var(--surface-hover);
+  border-radius: var(--radius-sm);
+  margin-top: var(--sp-4);
+  animation: shimmer 1.4s linear infinite;
+  background: linear-gradient(90deg, var(--surface-raised) 25%, var(--surface-hover) 50%, var(--surface-raised) 75%);
+  background-size: 200% 100%;
+}
+
+.skeletonAbstract {
+  height: 280px;
+  background: var(--surface-hover);
+  border-radius: var(--radius-md);
+  margin-top: var(--sp-8);
+  animation: shimmer 1.4s linear infinite;
+  background: linear-gradient(90deg, var(--surface-raised) 25%, var(--surface-hover) 50%, var(--surface-raised) 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonTitle,
+  .skeletonAuthors,
+  .skeletonAbstract {
+    animation: none;
+  }
+}
