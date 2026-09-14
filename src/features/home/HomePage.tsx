@@ -8,10 +8,24 @@ import styles from './home.module.css'
 const SOURCES = [
   {
     name: 'OpenAlex',
-    meta: 'Aggregated scholarly metadata',
+    meta: '250M+ works · General discovery',
     blurb:
-      'A public index of over 250&thinsp;million works contributed by thousands of institutions — the living catalogue Vellum searches.',
+      'A public index of over 250 million works contributed by thousands of institutions — the primary open catalogue Vellum searches across all disciplines.',
     link: 'https://openalex.org',
+  },
+  {
+    name: 'Europe PMC',
+    meta: '44M+ records · Biomedical search',
+    blurb:
+      'Specialized biomedical and life-sciences literature with direct links to PubMed Central full-text open-access articles and biological data.',
+    link: 'https://europepmc.org',
+  },
+  {
+    name: 'Crossref',
+    meta: '160M+ records · Metadata verification',
+    blurb:
+      'Canonical publisher deposits used by Vellum for deterministic DOI verification, publisher links, and authoritative bibliographies.',
+    link: 'https://crossref.org',
   },
 ]
 
