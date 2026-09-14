@@ -1,5 +1,5 @@
 .hero {
-  padding-block: clamp(var(--sp-12), 12vh, var(--sp-20)) var(--sp-10);
+  padding-block: clamp(var(--sp-10), 10vh, var(--sp-20)) var(--sp-10);
   max-width: 880px;
 }
 
@@ -14,7 +14,7 @@
 .heroTitle {
   font-family: var(--font-serif);
   font-weight: 500;
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2rem, 7.5vw, 4rem);
   line-height: 1.06;
   letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
@@ -33,6 +33,12 @@
 
 .searchZone {
   margin-top: var(--sp-8);
+}
+
+@media (min-width: 640px) {
+  .searchZone {
+    margin-top: var(--sp-10);
+  }
 }
 
 .underSearch {

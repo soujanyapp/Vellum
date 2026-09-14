@@ -5,6 +5,12 @@
   padding: var(--sp-4) 0;
 }
 
+@media (min-width: 640px) {
+  .card {
+    padding: var(--sp-5) 0;
+  }
+}
+
 @media (min-width: 900px) {
   .card {
     padding-inline: var(--sp-3);
@@ -41,11 +47,19 @@
 .meta {
   display: flex;
   align-items: baseline;
-  gap: var(--sp-3);
+  gap: var(--sp-2) var(--sp-3);
   flex-wrap: wrap;
   margin: 0 0 var(--sp-3);
   font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
   color: var(--text-muted);
+  min-width: 0;
+}
+
+@media (max-width: 479px) {
+  .meta {
+    font-size: var(--text-sm);
+  }
 }
 
 .venue {
@@ -77,12 +91,23 @@
   display: inline-flex;
   align-items: center;
   gap: var(--sp-1);
+  min-height: 24px;
+  min-width: 0;
+  max-width: 100%;
   font-size: var(--text-xs);
+  line-height: var(--leading-snug);
   color: var(--text-muted);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-full);
-  padding: 2px 8px;
+  padding: 3px 9px;
   background: var(--surface-raised);
+}
+
+@media (max-width: 479px) {
+  .badge {
+    min-height: 28px;
+    padding: 4px 10px;
+  }
 }
 
 .badgeType {
@@ -143,6 +168,7 @@
   color: var(--text-faint);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-xs);
-  padding: 2px 8px;
+  min-height: 24px;
+  padding: 3px 9px;
   background: var(--surface-raised);
 }

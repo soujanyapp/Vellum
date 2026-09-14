@@ -68,12 +68,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 28px;
+  min-height: 28px;
   padding: var(--sp-1);
   border: 0;
   border-radius: var(--radius-sm);
   background: transparent;
   color: var(--text-faint);
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .clear:hover {
@@ -108,6 +111,8 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-popover);
   overflow: hidden;
+  max-height: min(60vh, 420px);
+  overflow-y: auto;
 }
 
 .popoverHint {

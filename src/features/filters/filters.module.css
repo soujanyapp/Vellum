@@ -19,8 +19,26 @@
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-overlay);
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
   padding: var(--sp-6);
+}
+
+@media (max-width: 899px) {
+  .drawer {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 88vh;
+    max-height: 90dvh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    border-inline: 0;
+    border-bottom: 0;
+    padding: var(--sp-5);
+    padding-bottom: calc(var(--sp-5) + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 .drawer[data-state='closed'] {
@@ -52,20 +70,52 @@
 .drawerHeading {
   font-family: var(--font-serif);
   font-weight: 550;
-  margin: 0 0 var(--sp-5);
+  margin: 0;
   font-size: var(--text-xl);
   color: var(--text-primary);
+}
+
+.drawerHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.drawerClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  margin: calc(var(--sp-2) * -1);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  touch-action: manipulation;
+}
+
+.drawerClose:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.drawerScroll {
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .drawerSubmit {
   display: block;
   width: 100%;
-  margin-top: var(--sp-6);
+  margin-top: var(--sp-5);
   padding: var(--sp-3) var(--sp-4);
+  min-height: 48px;
   border-radius: var(--radius-md);
   background: var(--accent);
   color: #fff;
   font-size: var(--text-base);
+  touch-action: manipulation;
 }
 
 .drawerSubmit:hover {
@@ -99,8 +149,11 @@
 .fp__clear {
   background: none;
   border: 0;
+  min-height: 32px;
+  padding: 0 var(--sp-1);
   color: var(--text-muted);
   font-size: var(--text-sm);
+  touch-action: manipulation;
 }
 
 .fp__clear:hover {
@@ -125,6 +178,7 @@
   display: flex;
   align-items: center;
   gap: var(--sp-2);
+  min-height: 32px;
   cursor: pointer;
   font-size: var(--text-sm);
   color: var(--text-primary);
@@ -164,6 +218,7 @@ input[type='text'] {
   border: 1px solid var(--line-strong);
   background: var(--surface-raised);
   border-radius: var(--radius-sm);
+  min-height: 40px;
   padding: var(--sp-2);
   color: var(--text-primary);
   font-size: var(--text-sm);
@@ -172,7 +227,7 @@ input[type='text'] {
 select:focus,
 input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 var(--focus-ring) var(--focus-ring-color);
+  box-shadow: 0 0 0 3px var(--focus-ring-color);
   outline: none;
 }
 

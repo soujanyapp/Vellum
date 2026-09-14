@@ -42,7 +42,8 @@
 .stats {
   list-style: none;
   display: flex;
-  gap: var(--sp-10);
+  flex-wrap: wrap;
+  gap: var(--sp-6) var(--sp-10);
   margin: 0 0 var(--sp-4);
   padding: var(--sp-4) 0;
   border-top: 1px solid var(--line-soft);
@@ -76,12 +77,15 @@
 .orcid {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-2);
+  gap: var(--sp-1) var(--sp-2);
+  max-width: 100%;
+  min-height: 32px;
   font-size: var(--text-xs);
   color: var(--text-muted);
   text-decoration: underline;
   text-underline-offset: 3px;
   margin-bottom: var(--sp-3);
+  overflow-wrap: anywhere;
 }
 
 .topics {
@@ -107,8 +111,9 @@
   color: var(--text-primary);
   margin: var(--sp-10) 0 var(--sp-3);
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--sp-3);
+  gap: var(--sp-1) var(--sp-3);
 }
 
 .worksTotal {
@@ -151,12 +156,15 @@
 .workMeta {
   font-size: var(--text-xs);
   color: var(--text-muted);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .pagination {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: var(--sp-4);
   margin-top: var(--sp-6);
 }
@@ -165,12 +173,14 @@
   display: inline-flex;
   align-items: center;
   gap: var(--sp-2);
+  min-height: 40px;
   padding: var(--sp-2) var(--sp-3);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
   background: var(--surface-raised);
   color: var(--text-primary);
   font-size: var(--text-sm);
+  touch-action: manipulation;
 }
 
 .pageButton:disabled {

@@ -85,6 +85,7 @@
   --oa-soft: var(--pv-oa-50);
   --oa-soft-border: var(--pv-oa-100);
   --oa-strong: var(--pv-oa-800);
+  --green: var(--pv-oa-700);
 
   --danger: var(--pv-danger-600);
   --danger-strong: var(--pv-danger-700);
@@ -92,6 +93,7 @@
   --danger-soft-border: var(--pv-danger-100);
 
   --focus-ring: var(--pv-prussian-500);
+  --focus-ring-color: color-mix(in srgb, var(--pv-prussian-500) 30%, transparent);
 }
 
 /* ---------------------------------------------------------------------------
@@ -117,6 +119,7 @@
   --leading-snug: 1.25;
   --leading-normal: 1.5;
   --leading-relaxed: 1.65;
+  --leading-loose: 1.8;
 
   --tracking-tight: -0.015em;
   --tracking-normal: 0;
@@ -145,15 +148,21 @@
   --sp-16: 4rem; /* 64 */
   --sp-20: 5rem; /* 80 */
   --sp-24: 6rem; /* 96 */
+  --sp-32: 8rem; /* 128 */
 
   --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-full: 999px;
 
   --shadow-raised: 0 0 0 1px var(--pv-line-200), 0 10px 30px -12px rgba(22, 32, 42, 0.18);
   --shadow-pop: 0 0 0 1px var(--pv-line-200), 0 18px 44px -16px rgba(22, 32, 42, 0.28);
   --shadow-focus: 0 0 0 3px var(--pv-prussian-500);
+  --shadow-inset: inset 0 1px 2px rgba(22, 32, 42, 0.05);
+  --shadow-popover: 0 0 0 1px var(--pv-line-200), 0 18px 44px -16px rgba(22, 32, 42, 0.26);
+  --shadow-overlay: 0 0 0 1px var(--pv-line-200), 0 24px 60px -18px rgba(22, 32, 42, 0.32);
 
   --container-wide: 1180px;
   --container-nav: 1180px;
@@ -184,6 +193,9 @@
   --btn-hairline-fg: var(--text-primary);
   --btn-hairline-bg-hover: var(--pv-paper-300);
   --btn-hairline-border: var(--line-strong);
+
+  /* Search field (hero) */
+  --fs-search: clamp(1rem, 3.5vw, 1.375rem);
 
   /* Inputs */
   --input-bg: var(--surface-card);

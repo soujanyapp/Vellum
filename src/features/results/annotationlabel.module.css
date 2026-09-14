@@ -22,7 +22,9 @@
   display: inline-flex;
   align-items: center;
   gap: var(--sp-1);
-  padding: 2px var(--sp-2);
+  min-height: 24px;
+  max-width: 100%;
+  padding: 3px var(--sp-2);
   border-radius: var(--radius-sm);
   border: 1px solid var(--line-soft);
   background: var(--surface-page);
@@ -32,11 +34,19 @@
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   cursor: pointer;
+  touch-action: manipulation;
   transition:
     color var(--dur-fast) var(--ease-out),
     border-color var(--dur-fast) var(--ease-out),
     background-color var(--dur-fast) var(--ease-out);
   white-space: nowrap;
+}
+
+@media (max-width: 479px) {
+  .label {
+    min-height: 28px;
+    padding: 4px var(--sp-2);
+  }
 }
 
 .label:hover {
@@ -67,9 +77,9 @@
   padding: var(--sp-1) var(--sp-2);
   font-family: var(--font-sans);
   font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
   color: var(--text-muted);
-  line-height: var(--leading-normal);
-  max-width: 48ch;
+  max-width: min(48ch, 100%);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -4,7 +4,13 @@
   width: 100%;
   max-width: var(--container-wide);
   margin-inline: auto;
-  padding-inline: var(--sp-5);
+  padding-inline: var(--sp-4);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: var(--sp-5);
+  }
 }
 
 @media (min-width: 720px) {
@@ -41,7 +47,13 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--sp-4);
-  min-height: 60px;
+  min-height: 56px;
+}
+
+@media (min-width: 640px) {
+  .app-header__inner {
+    min-height: 60px;
+  }
 }
 
 .app-nav {
@@ -51,6 +63,9 @@
 }
 
 .app-nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
   font-size: var(--text-sm);
   color: var(--text-secondary);
   text-decoration: none;
@@ -58,6 +73,15 @@
   border-radius: var(--radius-sm);
   transition: color var(--dur-fast) var(--ease-out),
     background-color var(--dur-fast) var(--ease-out);
+}
+
+@media (max-width: 639px) {
+  .app-nav {
+    gap: var(--sp-1);
+  }
+  .app-nav__link {
+    min-height: 44px;
+  }
 }
 
 .app-nav__link:hover {
@@ -69,7 +93,7 @@
 
 .demo-banner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--sp-2);
   padding: var(--sp-2) var(--sp-4);
   background: var(--pv-paper-200);
@@ -121,7 +145,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .app-main > * {
-    animation: vellum-page 320ms var(--ease-out) both;
+    animation: vellum-page 320ms var(--ease-out) backwards;
   }
 }
 

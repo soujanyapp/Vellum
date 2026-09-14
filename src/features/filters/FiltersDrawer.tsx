@@ -33,10 +33,19 @@ export function FiltersDrawer({
       <Dialog.Portal>
         <Dialog.Overlay className={styles.overlay} />
         <Dialog.Content className={styles.drawer} aria-label="Filter results">
-          <Dialog.Title asChild>
-            <h2 className={styles.drawerHeading}>Refine your search</h2>
-          </Dialog.Title>
-          <FilterPanel params={params} onChange={onChange} />
+          <div className={styles.drawerHead}>
+            <Dialog.Title asChild>
+              <h2 className={styles.drawerHeading}>Refine your search</h2>
+            </Dialog.Title>
+            <Dialog.Close asChild>
+              <button type="button" className={styles.drawerClose} aria-label="Close filters">
+                <Icon name="x" size={18} />
+              </button>
+            </Dialog.Close>
+          </div>
+          <div className={styles.drawerScroll}>
+            <FilterPanel params={params} onChange={onChange} />
+          </div>
           <Dialog.Close asChild>
             <button type="button" className={styles.drawerSubmit}>
               Show {resultCount ?? 'results'}
